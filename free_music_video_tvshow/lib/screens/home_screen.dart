@@ -1,5 +1,11 @@
 import 'package:flutter/material.dart';
 
+import 'ArtistParentPage.dart';
+import 'CountryParentPage.dart';
+import 'LatestParentPage.dart';
+import 'TopListParentPage.dart';
+import 'TrendingParentPage.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -12,11 +18,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     var tabBarView = TabBarView(children: [
-      Container(color: Colors.orange),
-      Container(color: Colors.lightGreen),
-      Container(color: Colors.red),
-      Container(color: Colors.yellow),
-      Container(color: Colors.black38),
+      LatestParentPage(),
+      TrendingParentPage(),
+      ArtistParentPage(),
+      CountryParentPage(),
+      TopListParentPage(),
     ]);
 
     var header = AppBar(
@@ -82,3 +88,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ));
   }
 }
+
+
+
+
+
